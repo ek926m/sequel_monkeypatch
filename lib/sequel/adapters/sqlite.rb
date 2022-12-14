@@ -42,7 +42,7 @@ module Sequel
 
       def numeric(s)
         s = s.to_s unless s.is_a?(String)
-        BigDecimal(s) rescue s
+        ::BigDecimal.new(s) rescue s
       end
 
       def time(s)

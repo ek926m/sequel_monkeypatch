@@ -54,7 +54,7 @@ module Sequel
     end
 
     def cp.numeric(v)
-      BigDecimal(v)
+      BigDecimal.new(v)
     end
 
     def cp.binary(v)

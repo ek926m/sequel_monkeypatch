@@ -24,7 +24,7 @@ module Sequel
           if v == JAVA_BIG_DECIMAL_CONSTRUCTOR.call(i)
             i
           else
-            BigDecimal(v.to_string)
+            BigDecimal.new(v.to_string)
           end
         end
       end 
@@ -40,7 +40,7 @@ module Sequel
           if v == JAVA_BIG_DECIMAL_CONSTRUCTOR.call(i)
             i
           else
-            BigDecimal(v.to_string)
+            BigDecimal.new(v.to_string)
           end
         end
       end 

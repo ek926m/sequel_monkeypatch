@@ -36,14 +36,14 @@ module Sequel
 
     if RUBY_VERSION >= '2.4'
       def _typecast_value_string_to_decimal(value)
-        BigDecimal(value)
+        BigDecimal.new(value)
       rescue
-        BigDecimal('0.0')
+        BigDecimal.new('0.0')
       end
     else
       # :nocov:
       def _typecast_value_string_to_decimal(value)
-        BigDecimal(value)
+        BigDecimal.new(value)
       end
       # :nocov:
     end
